@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Yash | Engineering Student & Developer</title>
+  <meta name="description" content="Portfolio of Yash, engineering student at SVPCET building web apps, data and AI projects.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Figtree:wght@400;500;600&family=Fraunces:opsz,wght@9..144,600&family=Chakra+Petch:wght@600&family=Syne:wght@700&family=Unbounded:wght@600&family=Bitter:wght@700&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles (1).css">
+</head>
+<body>
+  <div class="progress" id="progress" aria-hidden="true"></div>
+  <a class="skip" href="#projects">Skip to projects</a>
+
+  <header class="nav">
+    <a class="brand" href="#top">Yash Yadav</a>
+    <nav aria-label="Main">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button id="theme" class="icon-btn" aria-label="Switch to dark theme">◐</button>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="grid" id="grid" aria-hidden="true"></div>
+      <div class="hero-text">
+        <p class="kicker">Engineering student at SVPCET</p>
+        <h1>I build web apps that solve problems on campus and beyond.</h1>
+        <p class="lead">Web development, databases, cloud and data projects, from a book exchange for my college to crowd-safety detection.</p>
+        <div class="actions">
+          <a class="btn primary" href="#projects">See my projects</a>
+          <a class="btn" href="resume.docx" download>Download resume</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="about-layout section-inner">
+        <div class="about-copy">
+          <p class="about-label">About me</p>
+          <h2>Yash Yadav</h2>
+          <p class="about-intro-label">Introduction</p>
+          <p class="about-copy-text">I'm Yash, a second-year Data Science student at SVPCET. I like turning everyday problems into working software. I built BookLoop so students at my college can swap second-hand books, and I made CrowdSense at a hackathon to spot dangerous crowd build-up on CCTV before it turns into an accident.</p>
+          <p class="about-copy-text">I work mostly with web development, databases and Python, and I'm learning cloud and AI along the way. I'm looking for an internship where I can build real products and learn from a team.</p>
+        </div>
+        <div class="about-image">
+          <img src="Yash1.jpeg" alt="Yash at St. Vincent Pallotti College of Engineering and Technology">
+          <a class="about-jump" href="#projects" aria-label="Explore projects">↗</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="section-inner">
+      <h2>Projects</h2>
+      <div class="filters" role="group" aria-label="Filter projects">
+        <button class="chip active" data-filter="all">All</button>
+        <button class="chip" data-filter="web">Web</button>
+        <button class="chip" data-filter="ai">AI</button>
+        <button class="chip" data-filter="data">Cloud &amp; data</button>
+        <button class="chip" data-filter="db">Database</button>
+      </div>
+
+      <p id="count" class="count" aria-live="polite">Showing all 6 projects</p>
+
+      <ul class="projects">
+        <li class="project" data-cat="web">
+          <button class="project-head" aria-expanded="false">
+            <span class="p-title f-book">BookLoop</span>
+            <span class="p-sum">Campus book exchange portal for SVPCET students.</span>
+            <span class="p-plus" aria-hidden="true">+</span>
+          </button>
+          <div class="project-body">
+            <p>Students list, search and swap second-hand textbooks. Replace this text with what you built, the problem it solves and how many people use it.</p>
+            <p class="tags">HTML · CSS · JavaScript · Backend</p>
+            <a href="https://pallotti-bookloop.vercel.app" class="link">Live site</a> <a href="https://github.com/yashbroyadav2506-commits/BOOK-Loop" class="link">Source code</a>
+            <!-- Add a screenshot: <img src="images/bookloop.png" alt="BookLoop home page" loading="lazy"> -->
+          </div>
+        </li>
+
+        <li class="project" data-cat="ai">
+          <button class="project-head" aria-expanded="false">
+            <span class="p-title f-crowd">CrowdSense</span>
+            <span class="p-sum">Predicts crowd-crush risk in real time from CCTV.</span>
+            <span class="p-plus" aria-hidden="true">+</span>
+          </button>
+          <div class="project-body">
+            <p>Detects people with YOLO, maps them onto an 8×8 grid to score density, and sends SMS alerts through Twilio before a crowd becomes dangerous. Built for a hackathon.</p>
+            <p class="tags">Python · YOLO · Computer vision · Twilio</p>
+            <a href="https://github.com/Harshlokhande07/CrowdSense" class="link">Source code</a>
+          </div>
+        </li>
+
+        <li class="project" data-cat="ai">
+          <button class="project-head" aria-expanded="false">
+            <span class="p-title f-material">Material name classifier</span>
+            <span class="p-sum">Groups and de-duplicates industrial material names.</span>
+            <span class="p-plus" aria-hidden="true">+</span>
+          </button>
+          <div class="project-body">
+            <p>A group project that uses NLP and LLMs to match messy material names to standardized codes.</p>
+            <p class="tags">Python · NLP · LLMs</p>
+            <a href="https://github.com/yashbroyadav2506-commits/Material-Code-Classifier" class="link">Source code</a>
+          </div>
+        </li>
+
+        <li class="project" data-cat="web">
+          <button class="project-head" aria-expanded="false">
+            <span class="p-title f-expense">Confidential Expense Splitter</span>
+            <span class="p-sum">Split group expenses without exposing amounts.</span>
+            <span class="p-plus" aria-hidden="true">+</span>
+          </button>
+          <div class="project-body">
+            <p>Built on the Midnight blockchain platform so balances stay private between friends.</p>
+            <p class="tags">Blockchain · Privacy · Web</p>
+            <a href="https://github.com/yashbroyadav2506-commits/Confidential-Expense-Splitter" class="link">Source code</a>
+          </div>
+        </li>
+
+        <li class="project" data-cat="db">
+          <button class="project-head" aria-expanded="false">
+            <span class="p-title f-grocery">Grocery store database</span>
+            <span class="p-sum">DBMS project covering inventory, billing and customers.</span>
+            <span class="p-plus" aria-hidden="true">+</span>
+          </button>
+          <div class="project-body">
+            <p>Normalized schema with queries for stock, sales and supplier reports.</p>
+            <p class="tags">SQL · ER modelling · Normalization</p>
+            <a href="https://github.com/yashbroyadav2506-commits/DBMS-Project-" class="link">Source code</a>
+          </div>
+        </li>
+
+        <li class="project" data-cat="data">
+          <button class="project-head" aria-expanded="false">
+            <span class="p-title f-book">Serverless Data Lake Dashboard</span>
+            <span class="p-sum">End-to-end serverless sales data lake on AWS with an interactive dashboard.</span>
+            <span class="p-plus" aria-hidden="true">+</span>
+          </button>
+          <div class="project-body">
+            <p>Built a serverless data pipeline on AWS that stores raw sales data in Amazon S3, uses an AWS Glue crawler to discover the schema automatically, and queries it with SQL in Amazon Athena. The results feed an interactive Streamlit dashboard that visualizes sales trends by month, category and state, covering the full cloud pipeline from raw files to insights.</p>
+            <p class="tags">AWS S3 · AWS Glue · Amazon Athena · Python · Pandas · Streamlit · Plotly</p>
+            <a href="https://github.com/yashbroyadav2506-commits/Serverless-Data-Lake-Dashboard" class="link">Source code</a>
+            <img src="dashboard.png" alt="Serverless Data Lake Dashboard" loading="lazy">
+            <img src="dashboard1.png" alt="Serverless Data Lake Dashboard" loading="lazy">
+          </div>
+        </li>
+      </ul>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="section-inner">
+      <h2>Contact</h2>
+          </div>
+        </li>
+      </ul>
+      </div>
+    </section>
+
+    <section id="skills" class="section">
+      <div class="section-inner">
+      <h2>Skills</h2>
+      <dl class="skills">
+        <div><dt>Web</dt><dd>HTML, CSS, JavaScript, responsive design</dd></div>
+        <div><dt>Data</dt><dd>SQL, DBMS design, data analytics, Python</dd></div>
+        <div><dt>Cloud &amp; IoT</dt><dd>AWS fundamentals, IoT prototyping</dd></div>
+        <div><dt>AI</dt><dd>Computer vision, NLP, working with LLMs</dd></div>
+      </dl>
+      </div>
+    </section>
+
+  
+
+    <section id="contact" class="section">
+      <div class="section-inner">
+      <h2>Contact</h2>
+      <p class="lead">Open to internships and collaborations. Send a message and I will reply by email.</p>
+      <form id="contact-form" class="form" novalidate>
+        <label>Name <input name="name" required autocomplete="name"></label>
+        <label>Email <input name="email" type="email" required autocomplete="email"></label>
+        <label>Message <textarea name="message" rows="4" required></textarea></label>
+        <p id="form-note" class="note" role="status"></p>
+        <button class="btn primary" type="submit">Send message</button>
+      </form>
+      <p class="links"><a href="mailto:yashyadav.25@stvincentngp.edu.in">yashyadav.25@stvincentngp.edu.in</a> · <a href="https://github.com/yashbroyadav2506-commits">GitHub</a> · <a href="https://www.linkedin.com/in/yashyadav25">LinkedIn</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <a class="footer-name" href="#top">Yash Yadav</a>
+      <div class="footer-contact">
+        <a href="mailto:yashbro.yadav2506@gmail.com">yashyadav.25@stvincentngp.edu.in</a>
+        <span>Nagpur, Maharashtra</span>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="footer-socials">
+        <a href="https://github.com/yashbroyadav2506-commits" aria-label="GitHub" title="GitHub">GH</a>
+        <a href="https://www.linkedin.com/in/yashyadav25" aria-label="LinkedIn" title="LinkedIn">in</a>
+      </div>
+      <p class="footer-copyright">© <span id="year"></span> Yash Yadav</p>
+    </div>
+  </footer>
+  <button id="to-top" class="to-top" aria-label="Back to top">↑</button>
+  <script src="script (1).js"></script>
+</body>
+</html>
